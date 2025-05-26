@@ -59,6 +59,9 @@ const Sidebar = () => {
 
         {/* Navigation */}
         <nav className="py-4 text-sm space-y-1">
+          <NavLink to="/" className={navLinkClasses}>
+            <IoHomeOutline size={20} /> Go To Home 
+          </NavLink>
           <NavLink to="/school/admin/dashboard" className={navLinkClasses}>
             <IoHomeOutline size={20} /> Dashboard
           </NavLink>
