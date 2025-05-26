@@ -113,6 +113,9 @@ export default function Header() {
                         <FaSquareXTwitter className='text-2xl text-gray-800' />
                         <FaSquareInstagram className='text-2xl text-gray-800' />
                     </div>
+                    <div className="flex mt-10 justify-center gap-4 mb-6">
+                        <NavLink to={'/school/admin/dashboard'}>Login</NavLink>
+                    </div>
                 </div>
             )}
 
@@ -135,6 +138,9 @@ export default function Header() {
                 <button className="hidden md:block bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-md text-base font-semibold">
                     ADMISSION
                 </button>
+                <NavLink to={'/school/admin/dashboard'} className="hidden md:block border-blue-800 border text-black   px-2 py-1 rounded-md text-base font-semibold">
+                    Login
+                </NavLink>
             </div>
 
             {/* Desktop Navigation */}
