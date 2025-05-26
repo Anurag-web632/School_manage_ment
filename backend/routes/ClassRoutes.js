@@ -3,15 +3,15 @@ import { addClassController, DeleteClassCotroller, getAllClassController, update
 const router = express.Router()
 //ROUTES
 // POST API
-// http://localhost:8000/api/v2/class/add
+// https://school-manage-ment.onrender.com/api/v2/class/add
 router.post('/add', addClassController)
-// http://localhost:8000/api/v2/class/all
+// https://school-manage-ment.onrender.com/api/v2/class/all
 router.get('/all', getAllClassController)
-// http://localhost:8000/api/v2/class/update
+// https://school-manage-ment.onrender.com/api/v2/class/update
 router.put('/update/:id', updateClassCotroller)
-// http://localhost:8000/api/v2/class/delete
+// https://school-manage-ment.onrender.com/api/v2/class/delete
 router.delete('/delete/:id', DeleteClassCotroller)
-// // http://localhost:8000/api/v2/class/get/
+// // https://school-manage-ment.onrender.com/api/v2/class/get/
 // router.get('/get/:_id',isSignIn,getSingleDepartmentCotroller)
 
 

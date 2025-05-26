@@ -25,7 +25,7 @@ export default function Login() {
     }
 
     try {
-      const res = await axios.post("http://localhost:8000/api/v2/emp/login", {
+      const res = await axios.post("https://school-manage-ment.onrender.com/api/v2/emp/login", {
         email,
         password,
         role, // Pass role in the request

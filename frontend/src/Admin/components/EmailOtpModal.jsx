@@ -33,7 +33,7 @@ export default function EmailOtpModal({ onClose, onVerified }) {
   const handleSendOtp = async () => {
     try {
       const { data } = await axios.post(
-        `http://localhost:8000/api/v2/emp/emailVerified`,
+        `https://school-manage-ment.onrender.com/api/v2/emp/emailVerified`,
         { email: email },
         {
           headers: {

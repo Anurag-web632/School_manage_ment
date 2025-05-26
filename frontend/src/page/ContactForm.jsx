@@ -36,7 +36,7 @@ export default function ContactForm() {
 
   try {
     const res = await axios.post(
-      "http://localhost:8000/api/v2/admission/admission-enquiry",
+      "https://school-manage-ment.onrender.com/api/v2/admission/admission-enquiry",
       formData
     );
     toast.success(res.data.message || "Enquiry submitted successfully!");

@@ -21,7 +21,7 @@ export default function StudentAdmissionForm() {
     }
 
     try {
-      const res = await axios.post('http://localhost:8000/api/v3/student/add', formData, {
+      const res = await axios.post('https://school-manage-ment.onrender.com/api/v3/student/add', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       toast.success('Admission submitted successfully!');
@@ -44,7 +44,7 @@ export default function StudentAdmissionForm() {
 
   const getClasses = async () => {
     try {
-      const { data } = await axios.get('http://localhost:8000/api/v2/class/all');
+      const { data } = await axios.get('https://school-manage-ment.onrender.com/api/v2/class/all');
       setAllClass(data);
     } catch (error) {
       console.error('Failed to load classes:', error);

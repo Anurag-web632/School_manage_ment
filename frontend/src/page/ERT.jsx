@@ -31,7 +31,7 @@ export default function ERT() {
         e.preventDefault();
 
         try {
-            const { data } = await axios.post('http://localhost:8000/api/ert/submit', formData); // ✅ Axios call
+            const { data } = await axios.post('https://school-manage-ment.onrender.com/api/ert/submit', formData); // ✅ Axios call
 
             if (data.success) {
                 toast.success("Form submitted successfully!");

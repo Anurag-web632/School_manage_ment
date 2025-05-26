@@ -9,7 +9,7 @@ export default function AllStudent() {
 
     const getallstudent = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:8000/api/v3/student/get`);
+            const { data } = await axios.get(`https://school-manage-ment.onrender.com/api/v3/student/get`);
             setAllStudent(data);
         } catch (error) {
             console.log(error);

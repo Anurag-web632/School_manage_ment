@@ -14,7 +14,7 @@ export default function AllTeacherList() {
 
     const getAllTeacher = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:8000/api/teachers/get`);
+            const { data } = await axios.get(`https://school-manage-ment.onrender.com/api/teachers/get`);
             setteachers(data);
         } catch (error) {
             console.log(error);
@@ -26,7 +26,7 @@ export default function AllTeacherList() {
         if (!confirmDelete) return;
 
         try {
-            await axios.delete(`http://localhost:8000/api/teachers/get/delet/${id}`);
+            await axios.delete(`https://school-manage-ment.onrender.com/api/teachers/get/delet/${id}`);
             toast.success("Teacher deleted successfully");
             getAllTeacher(); // Refresh list
         } catch (error) {
@@ -78,7 +78,7 @@ export default function AllTeacherList() {
                                         <td className="px-4 py-3 flex items-center gap-2">
                                             {teacher?.userId?.profileImage ? (
                                                 <img
-                                                    src={`http://localhost:8000/${teacher.userId.profileImage}`}
+                                                    src={`https://school-manage-ment.onrender.com/${teacher.userId.profileImage}`}
                                                     alt="avatar"
                                                     className="w-8 h-8 rounded-full"
                                                 />

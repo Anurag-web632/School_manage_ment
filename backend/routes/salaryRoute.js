@@ -4,10 +4,10 @@ from "../controllers/salaryController.js";
 const router =  express.Router()
 //API
 //POST
-// http://localhost:8000/api/v2/employees/salary/add
+// https://school-manage-ment.onrender.com/api/v2/employees/salary/add
 router.post("/add",addSalaryController);
 
-// http://localhost:8000/api/v2/employees/salary/view
+// https://school-manage-ment.onrender.com/api/v2/employees/salary/view
 router.get("/view",viewSalaryController);
 
 

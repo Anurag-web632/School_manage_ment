@@ -38,7 +38,7 @@ const CourseManagement = () => {
 
   const getClasses = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/v2/class/all");
+      const { data } = await axios.get("https://school-manage-ment.onrender.com/api/v2/class/all");
       setAllClasses(data);
     } catch (error) {
       console.log(error);
@@ -47,7 +47,7 @@ const CourseManagement = () => {
 
   const getSubjects = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/v2/subject/all");
+      const { data } = await axios.get("https://school-manage-ment.onrender.com/api/v2/subject/all");
       setAllSubjects(data);
     } catch (error) {
       console.error("Error fetching subjects:", error);
@@ -72,7 +72,7 @@ const CourseManagement = () => {
     if (!window.confirm("Are you sure you want to delete this subject?")) return;
 
     try {
-      await axios.delete(`http://localhost:8000/api/v2/subject/delete-multiple/${id}`);
+      await axios.delete(`https://school-manage-ment.onrender.com/api/v2/subject/delete-multiple/${id}`);
       toast.success("Subject deleted successfully");
       getSubjects();
     } catch (error) {
@@ -88,10 +88,10 @@ const CourseManagement = () => {
 
     try {
       if (editingSubjectId) {
-        await axios.put(`http://localhost:8000/api/v2/subject/update/${editingSubjectId}`, subjectData);
+        await axios.put(`https://school-manage-ment.onrender.com/api/v2/subject/update/${editingSubjectId}`, subjectData);
         toast.success("Subject updated successfully");
       } else {
-        await axios.post("http://localhost:8000/api/v2/subject/add", subjectData);
+        await axios.post("https://school-manage-ment.onrender.com/api/v2/subject/add", subjectData);
         toast.success("Subject added successfully");
       }
       getSubjects();

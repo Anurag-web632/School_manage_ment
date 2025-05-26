@@ -24,7 +24,7 @@ export default function EditPfofile({ onVerified }) {
   useEffect(() => {
     async function featchdata() {
       try {
-        const { data } = await axios.get(`http://localhost:8000/api/v2/get`, {
+        const { data } = await axios.get(`https://school-manage-ment.onrender.com/api/v2/get`, {
           headers: {
             Authorization: `Bearer ${auth?.token}`,
           },
@@ -74,7 +74,7 @@ export default function EditPfofile({ onVerified }) {
     }
     try {
       const { data } = await axios.post(
-        `http://localhost:8000/api/v2/address`,
+        `https://school-manage-ment.onrender.com/api/v2/address`,
         formData,
         {
           headers: {
@@ -108,7 +108,7 @@ export default function EditPfofile({ onVerified }) {
                   src={`${
                     imagePreview
                       ? imagePreview
-                      : `http://localhost:8000/${UserData?.image}`
+                      : `https://school-manage-ment.onrender.com/${UserData?.image}`
                   }`}
                   alt="Profile"
                   className="w-full h-full object-cover"

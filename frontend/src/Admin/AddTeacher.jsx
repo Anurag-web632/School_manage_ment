@@ -14,7 +14,7 @@ export default function AddTeacher() {
 
     const getSubjects = async (selectedClassId) => {
         try {
-            const { data } = await axios.get(`http://localhost:8000/api/v2/subject/ClassId/${selectedClassId}`);
+            const { data } = await axios.get(`https://school-manage-ment.onrender.com/api/v2/subject/ClassId/${selectedClassId}`);
             setAllSubjects(data);
         } catch (error) {
             console.error("Error fetching subjects:", error);
@@ -32,7 +32,7 @@ export default function AddTeacher() {
         });
 
         try {
-            const res = await axios.post('http://localhost:8000/api/teachers/add', formData, {
+            const res = await axios.post('https://school-manage-ment.onrender.com/api/teachers/add', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
 
@@ -56,7 +56,7 @@ export default function AddTeacher() {
 
     const getClasses = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8000/api/v2/class/all");
+            const { data } = await axios.get("https://school-manage-ment.onrender.com/api/v2/class/all");
             setAllClasses(data);
         } catch (error) {
             console.log(error);

@@ -23,7 +23,7 @@ export default function AllClassess() {
     }
      const getClasses = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:8000/api/v2/class/all`)
+            const { data } = await axios.get(`https://school-manage-ment.onrender.com/api/v2/class/all`)
             setAllClasses(data)
         } catch (error) {
             console.log(error)
@@ -92,7 +92,7 @@ export default function AllClassess() {
                                                 <MdDelete className='text-xl' onClick={async () => {
                                                     if (confirm("Are your Sure To Delete")) {
                                                         try {
-                                                            const { data } = await axios.delete(`http://localhost:8000/api/v2/class/delete/${cls._id}`)
+                                                            const { data } = await axios.delete(`https://school-manage-ment.onrender.com/api/v2/class/delete/${cls._id}`)
                                                             toast.success("Delete SucessFully")
                                                             getClasses()
                                                         } catch (error) {

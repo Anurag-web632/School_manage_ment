@@ -12,10 +12,10 @@ import { isAdmin, isSignIn } from "../middlewares/authMiddeware.js";
 const router = express.Router();
 //API ROUTES
 // REGISTER
-// http://localhost:8000/api/v2/emp/register
+// https://school-manage-ment.onrender.com/api/v2/emp/register
 router.post("/register", registerController);
 // LOGIN
-//  http://localhost:8000/api/v2/emp/login
+//  https://school-manage-ment.onrender.com/api/v2/emp/login
 router.post("/login", loginController);
 
 //PROTECTD ROUTES
@@ -23,15 +23,15 @@ router.post("/login", loginController);
 router.get("/admin-protected", isSignIn, isAdmin, (req, res) => {
   res.status(200).json({ ok: true });
 });
-// http://localhost:8000/api/v2/emp/emailVerified
+// https://school-manage-ment.onrender.com/api/v2/emp/emailVerified
 router.post("/emailVerified", isSignIn, EmailVerification);
 
-//http://localhost:8000/api/v2/emp/user-protected
+//https://school-manage-ment.onrender.com/api/v2/emp/user-protected
 router.get("/user-protected", isSignIn, (req, res) => {
   res.status(200).json({ ok: true });
 });
 
-//http://localhost:8000/api/v2/emp/passwordmatch
+//https://school-manage-ment.onrender.com/api/v2/emp/passwordmatch
 router.post('/passwordmatch',isSignIn ,passwordmatch)
 router.post('/ForgetPass',isSignIn ,forgetpassowrd)
 router.get('/getsingle',isSignIn ,getSigngleUser)

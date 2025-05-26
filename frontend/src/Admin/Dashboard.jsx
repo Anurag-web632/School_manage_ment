@@ -83,7 +83,7 @@ export default function Dashboard() {
     e.preventDefault();
 
     try {
-      const data = await axios.post(`http://localhost:8000/api/marquee/add`, { text: inputValue }, {
+      const data = await axios.post(`https://school-manage-ment.onrender.com/api/marquee/add`, { text: inputValue }, {
         headers: {
           Authorization: `Bearer ${auth?.token}`,
         },
