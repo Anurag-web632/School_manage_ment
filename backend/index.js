@@ -27,8 +27,18 @@ const port = process.env.PORT || 8000;
 // DB CONNECTION
 connectDB();
 
+// ✅ CORS Configuration (Allow frontend only)
+const allowedOrigins = [
+  "https://school-mangenment.onrender.com",
+  "http://localhost:5173" // for local development (optional)
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 // MIDDLEWARES
-app.use(cors());
 app.use(express.json());
 app.use(express.static("public/uploads"));
 
@@ -46,9 +56,9 @@ app.use("/api/ert", ertRoutes);                      // ERT routes
 app.use("/api/marquee", MarqueeRoute);               // Marquee routes
 app.use("/api/v2", Addressrouter);                   // Address routes
 
-// ✅ ROOT ROUTE
+// ROOT ROUTE
 app.get("/", (req, res) => {
-  res.send("Welcome to the Schooll Management Backend API 🎓");
+  res.send("Welcome to the School Management Backend API 🎓");
 });
 
 // START SERVER
