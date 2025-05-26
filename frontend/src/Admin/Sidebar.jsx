@@ -11,6 +11,7 @@ import {
   IoMenu,
   IoClose,
 } from "react-icons/io5";
+import { MdDashboard } from "react-icons/md";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { NavLink, useLocation } from "react-router-dom";
 import { FaClipboardList, FaUser, FaUsers } from 'react-icons/fa';
@@ -60,10 +61,11 @@ const Sidebar = () => {
         {/* Navigation */}
         <nav className="py-4 text-sm space-y-1">
           <NavLink to="/" className={navLinkClasses}>
-            <IoHomeOutline size={20} /> Go To Home 
+            <IoHomeOutline size={20} /> Go To Home
           </NavLink>
           <NavLink to="/school/admin/dashboard" className={navLinkClasses}>
-            <IoHomeOutline size={20} /> Dashboard
+
+            <MdDashboard size={20} /> Dashboard
           </NavLink>
 
           {/* Academic Dropdown */}
